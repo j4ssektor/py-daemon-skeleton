@@ -1,0 +1,4 @@
+period: 60  # seconds
+
+server:
+    host: localhost
