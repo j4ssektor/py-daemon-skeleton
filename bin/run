@@ -4,11 +4,11 @@ import logging
 from skeleton.py_daemonize import (daemonize, load_config, schedule, 
                                    wait_for_shutdown, install_signal_handlers,
                                    configure_logging)
-from skeleton import send_useless_info_to_server
+from skeleton import perform_useless_task
 
 LOG = logging.getLogger(__name__)
 
-daemonize()
+daemonize('/var/run/example.pid', '/var/log/example_daemn.log')
 
 configure_logging()
 install_signal_handlers()
@@ -17,8 +17,8 @@ config = load_config()
 
 LOG.info('Starting')
 
-schedule(lambda: send_useless_info_to_server(config['server']['host']),
-         period=config['period'], run_now=True)
+schedule(lambda: perform_useless_task(config['server']['host']),
+         period=config['period'], run_now=False)
 
 
 wait_for_shutdown()

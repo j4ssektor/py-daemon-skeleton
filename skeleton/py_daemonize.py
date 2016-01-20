@@ -66,7 +66,7 @@ def configure_logging():
         logging.basicConfig(level=logging.DEBUG)
 
 
-def schedule(func, *, period, run_now=False):
+def schedule(func, period, run_now=False):
     def wrapper():
         try:
             func()
