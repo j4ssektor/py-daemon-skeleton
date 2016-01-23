@@ -1,6 +1,0 @@
-#!/usr/bin/make -f
-
-export DH_VIRTUALENV_INSTALL_ROOT=/usr/share/
-
-%:
-    dh $@ --with python-virtualenv --python=python3 --extra-index-url=http://pypi.mon.i-free.ru:9999/simple/
