@@ -1,0 +1,30 @@
+#!/bin/sh -e
+
+if ! getent group py-daemon-skeleton > /dev/null 2>&1 ; then
+addgroup --system --quiet py-daemon-skeleton
+fi
+
+if ! getent passwd py-daemon-skeleton > /dev/null 2>&1 ; then
+adduser --quiet \
+--system --disabled-login --ingroup py-daemon-skeleton \
+--home /var/run/py-daemon-skeleton/ --no-create-home \
+py-daemon-skeleton
+fi
+
+chown py-daemon-skeleton:py-daemon-skeleton /var/log/py-daemon-skeleton -R
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+    pycompile -p py-daemon-skeleton 
+fi
+
+# End automatically added section
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/py-daemon-skeleton" ]; then
+    update-rc.d py-daemon-skeleton defaults >/dev/null
+    invoke-rc.d py-daemon-skeleton start || exit $?
+fi
+# End automatically added section
+
+
+exit 0

@@ -8,4 +8,6 @@ setup(
     author='Nikolai Nozhenko',
     author_email='j4ssektor@gmail.com',
     license = 'MIT',
+    description='',
+    scripts=['py-daemon-skeleton'],
 )
