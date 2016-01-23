@@ -12,9 +12,9 @@ from threading import Event
 
 # Timer was a factory function before python 3.3
 try:
-    from threading import _Timer as Timer  #pylint: disable=E0611
+    from threading import _Timer as Timer
 except ImportError:
-    from threading import Timer  #pylint: disable=E0611
+    from threading import Timer
 
 SHUTDOWN = Event()
 

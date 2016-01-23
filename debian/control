@@ -1,0 +1,11 @@
+Source: skeleton
+Section: python
+Priority: extra
+Maintainer: Evgeniy Petrov <blin@i-free.com>
+Build-Depends: debhelper (>= 9), python3, dh-virtualenv, libpq-dev, python3-dev
+Standards-Version: 3.9.5
+
+Package: skeleton
+Architecture: all
+Depends: python3, ifree-daemonizer-base
+Description: Skeleton daemon
