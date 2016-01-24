@@ -1,0 +1,7 @@
+PID_DIR="/var/run/py-daemon-skeleton"
+PID_FILE="${PID_DIR}/py-daemon-skeleton.pid"
+
+DAEMON_OPTIONS="--daemonize --pid-file=$PID_FILE"
+
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
