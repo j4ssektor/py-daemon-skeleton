@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
-from skeleton import __version__
+from pyskeleton import __version__
 
 
 setup(
-    name='skeleton',
+    name='pyskeleton',
     version=__version__,
     packages=find_packages(),
     author='Nikolai Nozhenko',

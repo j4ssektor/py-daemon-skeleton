@@ -1,6 +1,6 @@
 PYTHON=`which python`
-BUILDIR=$(CURDIR)/debian/skeleton
-PROJECT=skeleton
+BUILDIR=$(CURDIR)/debian/pyskeleton
+PROJECT=pyskeleton
 VERSION=0.1.0
 
 all:
