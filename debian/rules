@@ -7,6 +7,7 @@
 override_dh_auto_clean:
 	python setup.py clean -a
 	find . -name \*.pyc -exec rm {} \;
+	rm -rf dist deb_dist *.tar.gz
 
 
 
