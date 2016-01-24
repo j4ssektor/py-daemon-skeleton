@@ -1,2 +1,2 @@
 python setup.py --command-packages=stdeb.command sdist_dsc
-dpkg-buildpackage -b -us -uc
+dpkg-buildpackage -i -I -rfakeroot
