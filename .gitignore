@@ -6,3 +6,9 @@ dist/
 build/
 *.egg
 *.egg-info
+debian/files
+debian/*.debhelper.log
+debian/*.postinst.debhelper
+debian/*.postrm.debhelper
+debian/*.prerm.debhelper
+debian/*.substvars
