@@ -1,21 +1,21 @@
 #!/bin/sh -e
 
-if ! getent group py-daemon-skeleton > /dev/null 2>&1 ; then
-addgroup --system --quiet py-daemon-skeleton
+if ! getent group skeleton > /dev/null 2>&1 ; then
+addgroup --system --quiet skeleton
 fi
 
-if ! getent passwd py-daemon-skeleton > /dev/null 2>&1 ; then
+if ! getent passwd skeleton > /dev/null 2>&1 ; then
 adduser --quiet \
---system --disabled-login --ingroup py-daemon-skeleton \
---home /var/run/py-daemon-skeleton/ --no-create-home \
-py-daemon-skeleton
+--system --disabled-login --ingroup skeleton \
+--home /var/run/skeleton/ --no-create-home \
+skeleton
 fi
 
-chown py-daemon-skeleton:py-daemon-skeleton /var/log/py-daemon-skeleton -R
+chown skeleton:skeleton /var/log/py-daemon-skeleton -R
 
 # Automatically added by dh_python2:
 if which pycompile >/dev/null 2>&1; then
-    pycompile -p py-daemon-skeleton 
+    pycompile -p skeleton 
 fi
 
 # End automatically added section

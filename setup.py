@@ -15,9 +15,6 @@ setup(
         'py-daemon-skeleton=skeleton.skeleton:run',
         ],
     },
-    data_files=[('/etc/init.d', ['etc/init/py-daemon-skeleton']),
-                ('/etc/py-daemon-skeleton', ['etc/skeleton.yaml',
-                                             'etc/logging.conf',]),],
     classifiers=[
         'Development Status :: 3 - Alpha', # https://pypi.python.org/pypi?%3Aaction=list_classifiers
         'Intended Audience :: System Administrators',
