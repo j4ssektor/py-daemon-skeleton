@@ -1,2 +1,2 @@
-/etc/py-daemon-skeleton/skeleton.yaml
-/etc/py-daemon-skeleton/logging.conf
+/etc/pyskeleton/skeleton.yaml
+/etc/pyskeleton/logging.conf

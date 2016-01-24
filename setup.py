@@ -12,7 +12,7 @@ setup(
     description='Python daemon skeleton',
     entry_points={
         'console_scripts': [
-        'py-daemon-skeleton=skeleton.skeleton:run',
+        'pyskeleton=pyskeleton.skeleton:run',
         ],
     },
     classifiers=[

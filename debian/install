@@ -1,2 +1,2 @@
-debian/src/skeleton.yaml etc/py-daemon-skeleton
-debian/src/logging.conf etc/py-daemon-skeleton
+debian/src/skeleton.yaml etc/pyskeleton
+debian/src/logging.conf etc/pyskeleton
