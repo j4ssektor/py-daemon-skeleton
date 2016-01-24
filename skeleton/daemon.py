@@ -9,28 +9,33 @@ import argparse
 
 LOG = logging.getLogger(__name__)
 
-argument_parser = argparse.ArgumentParser()
-argument_parser.add_argument(
-    '-c', '--config',
-    help='Absolute path to configuration file',
-    default='/etc/py-daemon-skeleton/config.py',
-)
-argument_parser.add_argument(
-    '-d', '--daemonize',
-    action='store_true',
-    help='Specifies if py-daemon-skeleton should be ran as independent process'
-)
-argument_parser.add_argument(
-    '--pidfile',
-    help='Specifies where to store pid',
-    default='/var/run/py-daemon-skeleton/py-daemon-skeleton.pid',
-)
-argument_parser.add_argument(
-    '--error-log',
-    help='Specifies where stdout and stderr will be redirected '
-         'if skeleton is running as independent process',
-    default='/var/log/py-daemon-skeleton/py-daemon-skeleton.err',
-)
+
+def create_optparser():
+    argument_parser = argparse.ArgumentParser()
+    argument_parser.add_argument(
+        '-c', '--config',
+        help='Absolute path to configuration file',
+        default='/etc/py-daemon-skeleton/skeleton.yaml',
+    )
+    argument_parser.add_argument(
+        '-d', '--daemonize',
+        action='store_true',
+        help='Specifies if py-daemon-skeleton should be ran as independent process'
+    )
+    argument_parser.add_argument(
+        '--pidfile',
+        help='Specifies where to store pid',
+        default='/var/run/py-daemon-skeleton/py-daemon-skeleton.pid',
+    )
+    argument_parser.add_argument(
+        '--error-log',
+        help='Specifies where stdout and stderr will be redirected '
+             'if skeleton is running as independent process',
+        default='/var/log/py-daemon-skeleton/py-daemon-skeleton.err',
+    )
+
+    return argument_parser
+
 
 def daemonize(pidfile, error_log):
     if os.path.exists(pidfile):
