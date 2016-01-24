@@ -2,3 +2,18 @@
 
 %:
 	dh $@ --with python2 --buildsystem=python_distutils
+
+
+override_dh_auto_clean:
+	python setup.py clean -a
+	find . -name \*.pyc -exec rm {} \;
+
+
+
+override_dh_auto_build:
+	python setup.py build --force
+
+
+
+override_dh_python2:
+	dh_python2 --no-guessing-versions
