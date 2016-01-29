@@ -1,11 +1,10 @@
-Requirements:
-Debian packages:
-dh-make
+###### Required debian packages:
+* dh-make
 
-Python modules:
-stdeb
-pyyaml
+###### Required python modules:
+* stdeb
+* pyyaml
 
 
-Make deb-package for pyskeleton:
+###### Make deb-package for pyskeleton:
 make builddeb
