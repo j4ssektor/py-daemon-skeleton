@@ -56,8 +56,7 @@ def daemonize(pid_file, error_log):
     fork_exit_parent()
     os.chdir('/')
     os.setsid()
-    os.umask(0)
-    fork_exit_parent()
+    os.umask(027)
     close_all_open_files()
  
     # redirect standard file descriptors
