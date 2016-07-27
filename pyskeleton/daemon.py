@@ -15,23 +15,23 @@ def create_optparser():
     argument_parser.add_argument(
         '-c', '--config',
         help='Absolute path to configuration file',
-        default='/etc/puppetdiff/skeleton.yaml',
+        default='/etc/pyskeleton/skeleton.yaml',
     )
     argument_parser.add_argument(
         '-d', '--daemonize',
         action='store_true',
-        help='Specifies if puppetdiff should be ran as independent process'
+        help='Specifies if pyskeleton should be ran as independent process'
     )
     argument_parser.add_argument(
         '--pid-file',
         help='Specifies where to store pid',
-        default='/var/run/puppetdiff/puppetdiff.pid',
+        default='/var/run/pyskeleton/pyskeleton.pid',
     )
     argument_parser.add_argument(
         '--error-log',
         help='Specifies where stdout and stderr will be redirected '
              'if skeleton is running as independent process',
-        default='/var/log/puppetdiff/puppetdiff.err',
+        default='/var/log/pyskeleton/pyskeleton.err',
     )
 
     return argument_parser

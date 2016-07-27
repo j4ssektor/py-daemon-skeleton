@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import logging
 import datetime
-from .daemon import (daemonize, create_optparser)
-from .core import (load_config, schedule, configure_logging,
+from daemon import (daemonize, create_optparser)
+from core import (load_config, schedule, configure_logging,
                   wait_for_shutdown, install_signal_handlers)
 
 LOG = logging.getLogger(__name__)

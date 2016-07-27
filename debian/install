@@ -1,2 +1,2 @@
-debian/src/skeleton.yaml etc/puppetdiff
-debian/src/logging.conf etc/puppetdiff
+debian/src/skeleton.yaml etc/pyskeleton
+debian/src/logging.conf etc/pyskeleton

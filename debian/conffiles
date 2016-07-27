@@ -1,2 +1,2 @@
-/etc/puppetdiff/excludes.yaml
-/etc/puppetdiff/logging.conf
+/etc/pyskeleton/skeleton.yaml
+/etc/pyskeleton/logging.conf

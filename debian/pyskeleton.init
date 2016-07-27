@@ -1,28 +1,28 @@
 #! /bin/sh
 ### BEGIN INIT INFO
-# Provides:          puppetdiff
+# Provides:          pyskeleton
 # Required-Start:    $remote_fs $network
 # Required-Stop:     $remote_fs
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Start puppetdiff daemon
+# Short-Description: Start pyskeleton daemon
 ### END INIT INFO
 
 set -e
 
-NAME=puppetdiff
+NAME=pyskeleton
 DAEMON=/usr/bin/$NAME
 RETRY=15
 
 test -x $DAEMON || exit 0
 
-if [ -f /etc/default/puppetdiff ] ; then
-    . /etc/default/puppetdiff
+if [ -f /etc/default/pyskeleton ] ; then
+    . /etc/default/pyskeleton
 fi
 
 if test ! -d "$PID_DIR"; then
   mkdir "$PID_DIR"
-  chown -R puppetdiff:puppetdiff "$PID_DIR"
+  chown -R pyskeleton:pyskeleton "$PID_DIR"
 fi
 
 

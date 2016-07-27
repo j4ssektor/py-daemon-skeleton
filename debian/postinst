@@ -1,28 +1,28 @@
 #!/bin/sh -e
 
-if ! getent group puppetdiff > /dev/null 2>&1 ; then
-addgroup --system --quiet puppetdiff
+if ! getent group pyskeleton > /dev/null 2>&1 ; then
+addgroup --system --quiet pyskeleton
 fi
 
-if ! getent passwd puppetdiff > /dev/null 2>&1 ; then
+if ! getent passwd pyskeleton > /dev/null 2>&1 ; then
 adduser --quiet \
---system --disabled-login --ingroup puppetdiff \
---home /var/run/puppetdiff/ --no-create-home \
-puppetdiff
+--system --disabled-login --ingroup pyskeleton \
+--home /var/run/pyskeleton/ --no-create-home \
+pyskeleton
 fi
 
-chown puppetdiff:puppetdiff /var/log/puppetdiff -R
+chown pyskeleton:pyskeleton /var/log/pyskeleton -R
 
 # Automatically added by dh_python2:
 if which pycompile >/dev/null 2>&1; then
-    pycompile -p puppetdiff 
+    pycompile -p pyskeleton 
 fi
 
 # End automatically added section
 # Automatically added by dh_installinit
-if [ -x "/etc/init.d/puppetdiff" ]; then
-    update-rc.d puppetdiff defaults >/dev/null
-    invoke-rc.d puppetdiff start || exit $?
+if [ -x "/etc/init.d/pyskeleton" ]; then
+    update-rc.d pyskeleton defaults >/dev/null
+    invoke-rc.d pyskeleton start || exit $?
 fi
 # End automatically added section
 

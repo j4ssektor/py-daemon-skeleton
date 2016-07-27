@@ -1,5 +1,5 @@
-PID_DIR="/var/run/puppetdiff"
-PID_FILE="${PID_DIR}/puppetdiff.pid"
+PID_DIR="/var/run/pyskeleton"
+PID_FILE="${PID_DIR}/pyskeleton.pid"
 
 DAEMON_OPTIONS="--daemonize --pid-file=$PID_FILE"
 
