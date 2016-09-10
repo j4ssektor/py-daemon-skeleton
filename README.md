@@ -1,10 +1,8 @@
-###### Required debian packages:
-* dh-make
+# pyskeleton
+Skeleton python daemon
 
-###### Required python modules:
-* stdeb
-* pyyaml
+### Dependencies:
+- python-yaml
 
-
-###### Make deb-package for pyskeleton:
-make builddeb
+### To build debian package run:
+     dpkg-buildpackage -us -uc
