@@ -7,7 +7,7 @@ setup(
     version=__version__,
     packages=find_packages(),
     author='Nikolai Nozhenko',
-    author_email='j4ssektor@gmail.com',
+    author_email='nik.nozhenko@gmail.com',
     license='MIT',
     description='Python daemon skeleton',
     entry_points={
