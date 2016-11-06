@@ -36,7 +36,7 @@ def schedule(func, period, run_now=False):
         finally:
             if not SHUTDOWN.is_set():
                 schedule(func, period=period)
-                t.cancel()
+                sys.exit(0)
 
     t = Timer(0 if run_now else period, wrapper)
 
