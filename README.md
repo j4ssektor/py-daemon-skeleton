@@ -1,5 +1,4 @@
 # pyskeleton
-Skeleton python daemon
 
 ### Dependencies:
 - python-yaml
